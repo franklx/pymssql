@@ -1,3 +1,11 @@
+pymssql (1.0.3+frk-1) unstable; urgency=low
+
+  [ New Upstream Version ]
+  * 4 years in the making! :-) (1.0.2 released in April 2009)
+  * bugfix: Fix bug in get_result looping over dbresults where no result rows are returned from queries with newer versions of FreeTDS. Fixed by git commit: 5033df5
+
+ -- Franco Lucchini <flucchini@gmail.com>  Fri, 11 Oct 2013 00:00:00 +0200
+
 pymssql (1.0.2+dfsg-1) unstable; urgency=low
 
   [ Piotr Ożarowski ]
