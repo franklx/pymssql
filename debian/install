@@ -1,0 +1,2 @@
+nagios-plugin/check_mssql /usr/lib/nagios/plugins/
+nagios-plugin/mssql.cfg /etc/nagios-plugins/config

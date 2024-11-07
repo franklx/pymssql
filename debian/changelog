@@ -1,0 +1,60 @@
+pymssql (1.0.2+dfsg-1) unstable; urgency=low
+
+  [ Piotr Ożarowski ]
+  * Add Debian Python Modules Team to Uploaders
+  * Add Vcs-Svn and Vcs-Browser fields
+  * Add debian/watch file
+  * Add get-orig-source target
+
+  [ Jan Geboers ]
+  * New upstream release.
+  * Standards version is 3.8.2.
+  * Removed patch series, 01_nagios-plugin.patch is included upstream.
+  * Removed quilt build-dependecy because of the above.
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Sat, 11 Jul 2009 15:11:01 +0200
+
+pymssql (1.0.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add quilt support; build-depend on quilt.
+  * Use upstream-provided nagios plugin now (yes, it’s ours).
+  * 01_nagios-plugin.patch:
+    + Add an option to specify the port.
+    + Fix encoding.
+    + Fix SQL syntax.
+    + Connect explicitly to the "master" database.
+    + Improve perfdata output.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 18 Feb 2009 12:01:32 +0100
+
+pymssql (0.8.0+dfsg-3) unstable; urgency=low
+
+  * check_mssql: 
+    + return the time value in seconds so that it integrates correctly 
+      with the Nagios perf_data handlers.
+    + add a -P setting to define the TCP port.
+  * Wrap Depends and Build-Depends.
+  * Standards version is 3.8.0.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 21 Nov 2008 14:51:41 +0100
+
+pymssql (0.8.0+dfsg-2) unstable; urgency=low
+
+  * Ship a Nagios plugin for MS SQL databases.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 05 May 2008 11:50:05 +0200
+
+pymssql (0.8.0+dfsg-1) unstable; urgency=low
+
+  * Remove ntwdblib.dll from the upstream sources, because this file 
+    doesn’t have any associated source. Thanks Joerg Jaspert for 
+    noticing.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 06 Mar 2008 12:49:56 +0100
+
+pymssql (0.8.0-1) unstable; urgency=low
+
+  * Initial release. Closes: #468175.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 27 Feb 2008 18:49:15 +0100

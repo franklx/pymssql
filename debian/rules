@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+# Copyright © 2002,2003 Colin Walters <walters@debian.org>
+
+DEB_PYTHON_SYSTEM=pysupport
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/python-distutils.mk
+
+binary-post-install/python-pymssql::
+	chmod 755 debian/python-pymssql/usr/lib/nagios/plugins/*
+
+get-orig-source:
+	VER=$(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-+~]+).*,\1,p'); \
+	uscan --force-download --rename --download-version=$$VER --destdir=. && (\
+	tar -xz --exclude '*\.dll' -f pymssql_$$VER.orig.tar.gz && \
+	tar -czf pymssql_$$VER+dfsg.orig.tar.gz pymssql-$$VER; \
+	rm -f pymssql_$$VER.orig.tar.gz;\
+	rm -rf pymssql-$$VER)

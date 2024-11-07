@@ -1,0 +1,25 @@
+Source: pymssql
+Section: python
+Priority: optional
+Maintainer: Josselin Mouette <joss@debian.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 5.0.37.2),
+               python-all-dev (>= 2.3.5-11),
+               cdbs (>= 0.4.43), 
+               freetds-dev,
+               python-support (>= 0.3)
+Standards-Version: 3.8.2
+Vcs-Svn: svn://svn.debian.org/python-modules/packages/pymssql/trunk
+Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pymssql/trunk/
+
+Package: python-pymssql
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Description: Python database access for MS SQL server and Sybase
+ This package contains a Python module allowing direct access to 
+ Microsoft SQL server and Sybase databases. It is designed for 
+ simplicity and performance, and conforms to Python DB-API 2.0.
+ .
+ It also includes a Nagios plugin to check MS SQL servers remotely.
